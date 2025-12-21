@@ -18,18 +18,17 @@
 body{
     background:#fff;
     color:#000;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     padding:14px;
-    overflow:hidden;
 }
 
 /* ===== LAYOUT ===== */
 .wrapper{
-    max-width:820px;
+    max-width:900px;
     width:100%;
 }
 
@@ -38,13 +37,6 @@ h1{
     font-size:clamp(30px,7vw,60px);
     font-weight:700;
     margin-bottom:6px;
-    transition:transform .25s ease,letter-spacing .25s ease;
-}
-
-h1:hover,
-h1:active{
-    transform:translateY(-4px);
-    letter-spacing:2px;
 }
 
 /* ===== TAGLINE ===== */
@@ -52,34 +44,34 @@ h1:active{
     font-size:clamp(13px,3.5vw,20px);
     font-weight:600;
     letter-spacing:3px;
-    margin-bottom:12px;
-    opacity:.8;
-    transition:transform .25s ease,opacity .25s ease;
+    margin-bottom:22px;
+    opacity:.85;
 }
 
-.tagline:hover,
-.tagline:active{
-    transform:translateY(-3px);
-    opacity:1;
+/* ===== GRAPHIC ===== */
+.hero-graphic{
+    width:100%;
+    max-width:820px;
+    margin:0 auto 26px;
+}
+
+.hero-graphic img{
+    width:100%;
+    height:auto;
+    display:block;
 }
 
 /* ===== INTRO ===== */
 p{
     font-size:clamp(14px,3.5vw,16px);
-    line-height:1.5;
-    margin-bottom:16px;
+    line-height:1.6;
+    margin-bottom:20px;
     max-width:720px;
     margin-inline:auto;
     opacity:.95;
-    transition:transform .25s ease;
 }
 
-p:hover,
-p:active{
-    transform:translateY(-2px);
-}
-
-/* ===== COMING SOON (DARK + DOTS) ===== */
+/* ===== COMING SOON ===== */
 .coming-soon{
     display:inline-flex;
     align-items:center;
@@ -92,15 +84,8 @@ p:active{
     text-transform:uppercase;
     border-radius:2px;
     gap:6px;
-    transition:transform .25s ease;
 }
 
-.coming-soon:hover,
-.coming-soon:active{
-    transform:translateY(-3px) scale(1.03);
-}
-
-/* DOT SEQUENCE */
 .dots span{
     opacity:0;
     animation:dot 1.4s infinite;
@@ -115,26 +100,26 @@ p:active{
     20%{opacity:1}
     100%{opacity:0}
 }
-
-/* REMOVE TAP HIGHLIGHT */
-@media (hover:none){
-    *{
-        -webkit-tap-highlight-color:transparent;
-    }
-}
 </style>
 </head>
 
 <body>
 
 <div class="wrapper">
-    <h1>SolTechLabs</h1>
 
+    <h1>SolTechLabs</h1>
     <div class="tagline">SOLUTION BY R&amp;D</div>
 
-    <p>
-  SolTechLabs Is A Research-Driven Tech Solution Consultancy And Development Organization. We Focus On Finding And Building Valuable Tech Solutions By Research And Development.
+    <!-- GRAPHIC IMAGE -->
+    <div class="hero-graphic">
+        <img src="images/research-evolution.png" alt="Idea to Final Solution Evolution Graphic">
+    </div>
 
+    <p>
+        SolTechLabs is a research-driven tech solution consultancy and development organization.
+        We focus on transforming ideas into validated, structured, and production-ready solutions
+        through deep research and development.
+    </p>
 
     <div class="coming-soon">
         Coming Soon
@@ -144,6 +129,7 @@ p:active{
             <span>.</span>
         </span>
     </div>
+
 </div>
 
 </body>
